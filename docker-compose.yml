@@ -1,14 +1,16 @@
 version: '3.8'
 services:
   backend:
+    container_name: proyecto_backend
     build:
-      context: ./proyectBackend/proyectBackend
+      context: ./proyectBackend
       dockerfile: Dockerfile
     ports:
       - 5000:5000
     depends_on:
       - database
   frontend:
+    container_name: proyecto_frontend
     build:
       context: ./proyectFrontend
       dockerfile: Dockerfile
