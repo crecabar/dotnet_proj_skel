@@ -1,5 +1,5 @@
 # Imagen base para la construcción del proyecto de Angular
-FROM node:14 as build-stage
+FROM node:18 as build-stage
 
 # Establecer el directorio de trabajo dentro del contenedor
 WORKDIR /app
