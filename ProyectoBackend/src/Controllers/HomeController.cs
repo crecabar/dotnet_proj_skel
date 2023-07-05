@@ -9,7 +9,7 @@ namespace ProyectoBackend.src.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok("Hello from the backend!");
+            return new JsonResult("Hello from the backend!");
         }
     }
 }

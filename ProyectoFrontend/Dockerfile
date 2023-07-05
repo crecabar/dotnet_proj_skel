@@ -8,6 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Instalar las dependencias del proyecto
+RUN npm install -g npm@latest
 RUN npm install
 
 # Copiar el código fuente del proyecto
@@ -17,7 +18,7 @@ COPY . .
 RUN npm run build
 
 # Imagen base para el runtime de la aplicación de Angular
-FROM nginx:1.19
+FROM nginx:1.21
 
 # Copiar los archivos de construcción al contenedor Nginx
 COPY --from=build-stage /app/dist/ProyectoFrontend /usr/share/nginx/html
