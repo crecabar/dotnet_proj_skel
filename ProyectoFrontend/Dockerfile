@@ -21,7 +21,7 @@ RUN npm run build
 FROM nginx:1.21
 
 # Copiar los archivos de construcción al contenedor Nginx
-COPY --from=build-stage /app/dist/ProyectoFrontend /usr/share/nginx/html
+COPY --from=build-stage /app/dist/proyecto-frontend /usr/share/nginx/html
 
 # Configurar la exposición del puerto y el inicio de Nginx
 EXPOSE 80
